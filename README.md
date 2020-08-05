@@ -1,1 +1,1 @@
-# Human-Activity-Recognition
+# FPS game using AI
