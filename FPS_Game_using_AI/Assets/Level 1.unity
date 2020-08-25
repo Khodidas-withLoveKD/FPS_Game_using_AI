@@ -479,6 +479,7 @@ GameObject:
   - component: {fileID: 160182005}
   - component: {fileID: 160182004}
   - component: {fileID: 160182006}
+  - component: {fileID: 160182007}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -532,8 +533,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5dd63bbf9039e1a49bdc569386c2cf05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 4
   jump_Force: 10
+--- !u!114 &160182007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160182003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92551762f450e5e46acc4c3099661173, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprint_Speed: 8
+  move_Speed: 4
+  crouch_Speed: 1.5
 --- !u!1 &199384334
 GameObject:
   m_ObjectHideFlags: 0
@@ -2509,9 +2525,9 @@ MonoBehaviour:
   sensitivity: 5
   smooth_Steps: 10
   smooth_Weight: 0.4
-  roll_Angle: 10
+  roll_Angle: 0
   roll_Speed: 3
-  default_Look_Limits: {x: -70, y: 80}
+  default_Look_Limits: {x: -70, y: 30}
 --- !u!1 &1108657126
 GameObject:
   m_ObjectHideFlags: 0
