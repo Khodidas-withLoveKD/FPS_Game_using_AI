@@ -51,7 +51,7 @@ public class MouseLook : MonoBehaviour
     void Update()
     {
         LockAndUnlockCursor();
-        if (UnityEngine.Cursor.LockState == CursorLockMode.Locked)
+        if (UnityEngine.Cursor.lockState == CursorLockMode.Locked)
         {
             LookAround();
         }
@@ -59,15 +59,15 @@ public class MouseLook : MonoBehaviour
 
     void LockAndUnlockCursor()
     {
-        if(input.GetKeyDown(KeyCode.Escape))
+        if(Input.GetKeyDown(KeyCode.Escape))
         {
-            if(UnityEngine.Cursor.LockState == CursorLockMode.Locked)
+            if(UnityEngine.Cursor.lockState == CursorLockMode.Locked)
             {
-                UnityEngine.Cursor.LockState = CursorLockMode.None;
+                UnityEngine.Cursor.lockState = CursorLockMode.None;
             }
             else
             {
-                UnityEngine.Cursor.LockState = CursorLockMode.Locked;
+                UnityEngine.Cursor.lockState = CursorLockMode.Locked;
                 UnityEngine.Cursor.visible = false;
             }
         }
@@ -85,7 +85,8 @@ public class MouseLook : MonoBehaviour
         //rotation for z axis (little dizzy rotation) (used if player gets drunk)
         //current_Roll_Angle = Mathf.Lerp(current_Roll_Angle, Input.GetAxisRaw(MouseAxis.MOUSE_X) * roll_Angle, Time.deltaTime * roll_Speed);
 
-        lookRoot.localRotation = Quaternion.Euler(look_Angles.x, 0f, 0f /*current_Roll_Angle*/);
+        LookRoot.localRotation = Quaternion.Euler(look_Angles.x, 0f, 0f /*current_Roll_Angle*/);
         playerRoot.localRotation = Quaternion.Euler(0f, look_Angles.y, 0f);
+ 
     }
 }
