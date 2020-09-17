@@ -197,7 +197,7 @@ public class PlayerAttack : MonoBehaviour
             GameObject arrow = Instantiate(arrow_Prefab);
             arrow.transform.position = arrow_Bow_StartPosition.position;
 
-            arrow.GetComponent<ArrowBowScript>().Launch(mainCam);
+            //arrow.GetComponent<ArrowBowScript>().Launch(mainCam);
 
         }
         else
@@ -206,7 +206,7 @@ public class PlayerAttack : MonoBehaviour
             GameObject spear = Instantiate(spear_Prefab);
             spear.transform.position = arrow_Bow_StartPosition.position;
 
-            spear.GetComponent<ArrowBowScript>().Launch(mainCam);
+            //spear.GetComponent<ArrowBowScript>().Launch(mainCam);
 
         }
 
@@ -223,7 +223,7 @@ public class PlayerAttack : MonoBehaviour
 
             if (hit.transform.tag == Tags.ENEMY_TAG)
             {
-                hit.transform.GetComponent<HealthScript>().ApplyDamage(damage);
+                //hit.transform.GetComponent<HealthScript>().ApplyDamage(damage);
             }
 
         }
