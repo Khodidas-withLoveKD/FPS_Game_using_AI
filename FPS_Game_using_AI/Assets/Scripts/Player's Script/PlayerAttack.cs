@@ -112,7 +112,7 @@ public class PlayerAttack : MonoBehaviour
                         {
 
                             // throw arrow
-                           // ThrowArrowOrSpear(true);
+                            ThrowArrowOrSpear(true);
 
                         }
                         /*lse if (weapon_Manager.GetCurrentSelectedWeapon().bulletType
@@ -187,7 +187,7 @@ public class PlayerAttack : MonoBehaviour
         } // weapon self aim
 
     } // zoom in and out
-    /*
+
     void ThrowArrowOrSpear(bool throwArrow)
     {
 
@@ -212,7 +212,7 @@ public class PlayerAttack : MonoBehaviour
 
 
     } // throw arrow or spear
-    */
+
     void BulletFired()
     {
 
@@ -223,11 +223,11 @@ public class PlayerAttack : MonoBehaviour
 
             if (hit.transform.tag == Tags.ENEMY_TAG)
             {
-             //   hit.transform.GetComponent<HealthScript>().ApplyDamage(damage);
+                hit.transform.GetComponent<HealthScript>().ApplyDamage(damage);
             }
 
         }
 
     } // bullet fired
-    
+
 } // class
