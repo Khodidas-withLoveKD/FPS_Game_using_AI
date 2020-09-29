@@ -49,10 +49,12 @@ public class WeaponHandler : MonoBehaviour
         anim.SetTrigger(AnimationTags.SHOOT_TRIGGER);
     }
 
+    /* The below code is for arrow or bow.... that is why I've commented it
     public void Aim(bool canAim)
     {
         anim.SetBool(AnimationTags.AIM_PARAMETER, canAim);
     }
+    */
 
     void Turn_On_MuzzleFlash()
     {

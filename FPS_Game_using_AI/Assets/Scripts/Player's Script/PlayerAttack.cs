@@ -11,6 +11,7 @@ public class PlayerAttack : MonoBehaviour
     private float nextTimeToFire;
     public float damage = 20f;
 
+    
     private Animator zoomCameraAnim;
     private bool zoomed;
 
@@ -18,6 +19,7 @@ public class PlayerAttack : MonoBehaviour
 
     private GameObject crosshair;
 
+    /* The below code is for arrow or bow.... that is why I've commented it
     private bool is_Aiming;
 
     [SerializeField]
@@ -25,6 +27,8 @@ public class PlayerAttack : MonoBehaviour
 
     [SerializeField]
     private Transform arrow_Bow_StartPosition;
+    */
+
 
     void Awake()
     {
@@ -100,7 +104,7 @@ public class PlayerAttack : MonoBehaviour
                 }
                 else
                 {
-
+                    /*
                     // we have an arrow or spear
                     if (is_Aiming)
                     {
@@ -115,7 +119,7 @@ public class PlayerAttack : MonoBehaviour
                             ThrowArrowOrSpear(true);
 
                         }
-                        /*lse if (weapon_Manager.GetCurrentSelectedWeapon().bulletType
+                        else if (weapon_Manager.GetCurrentSelectedWeapon().bulletType
                                 == WeaponBulletType.SPEAR)
                         {
 
@@ -123,9 +127,9 @@ public class PlayerAttack : MonoBehaviour
                             ThrowArrowOrSpear(false);
 
                         }
-                        */
 
                     }
+                    */
 
                 } // else
 
@@ -136,6 +140,7 @@ public class PlayerAttack : MonoBehaviour
 
     } // weapon shoot
 
+   
     void ZoomInAndOut()
     {
 
@@ -163,6 +168,7 @@ public class PlayerAttack : MonoBehaviour
 
         } // if we need to zoom the weapon
 
+        /* The below code is for arrow or bow.... that is why I've commented it 
         if (weapon_Manager.GetCurrentSelectedWeapon().weapon_Aim == WeaponAim.SELF_AIM)
         {
 
@@ -185,9 +191,12 @@ public class PlayerAttack : MonoBehaviour
             }
 
         } // weapon self aim
+        */
 
     } // zoom in and out
+    
 
+    /*
     void ThrowArrowOrSpear(bool throwArrow)
     {
 
@@ -212,6 +221,7 @@ public class PlayerAttack : MonoBehaviour
 
 
     } // throw arrow or spear
+    */
 
     void BulletFired()
     {
@@ -220,6 +230,7 @@ public class PlayerAttack : MonoBehaviour
 
         if (Physics.Raycast(mainCam.transform.position, mainCam.transform.forward, out hit))
         {
+            //print("WE HIT : " + hit.transform.gameObject.name);
 
             if (hit.transform.tag == Tags.ENEMY_TAG)
             {
